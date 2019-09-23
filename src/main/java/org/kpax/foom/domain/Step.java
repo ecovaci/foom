@@ -6,4 +6,6 @@ package org.kpax.foom.domain;
  */
 public interface Step {
     void execute();
+    StepContext context();
+    Step next();
 }

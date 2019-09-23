@@ -1,25 +1,26 @@
-package org.kpax.foom.util.view;
+package org.kpax.foom.user.view;
 
 import com.google.common.reflect.ClassPath;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import org.controlsfx.control.textfield.TextFields;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-import java.beans.BeanInfo;
-import java.beans.Introspector;
 import java.io.File;
 import java.net.URL;
 import java.net.URLClassLoader;
-import java.util.Arrays;
 
 /**
  * @author Eugen Covaci {@literal eugen.covaci.q@gmail.com}
  * Created on 9/9/2019
  */
 @Component
+@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 public class SelectJavaBeanController {
+
     @FXML
     private ComboBox<String> classesComboBox;
 

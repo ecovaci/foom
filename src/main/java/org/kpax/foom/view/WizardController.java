@@ -1,5 +1,6 @@
 package org.kpax.foom.view;
 
+import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -7,6 +8,8 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
+import org.kpax.foom.JavafxApplication;
 import org.kpax.foom.util.FxUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
@@ -36,19 +39,24 @@ public class WizardController {
     @Autowired
     private ApplicationContext applicationContext;
 
+    @Autowired
+    private JavafxApplication fxApplication;
+
     @FXML
     public void initialize () throws Exception {
 
     }
 
     public void doBack(ActionEvent actionEvent)  throws Exception {
-        Node node = FxUtils.loadNode(applicationContext, "classpath:/view/util.select.javabean.fxml");
+        Node node = FxUtils.loadNode(applicationContext, "classpath:/view/user/select.javabean.fxml");
         borderPane.setCenter(node);
+        fxApplication.sizeToScene();
     }
 
     public void doNext(ActionEvent actionEvent) throws Exception {
-        Node node = FxUtils.loadNode(applicationContext, "classpath:/view/util.display.javabean.fxml");
+        Node node = FxUtils.loadNode(applicationContext, "classpath:/view/user/display.javabean.fxml");
         borderPane.setCenter(node);
+        fxApplication.sizeToScene();
     }
 
 }

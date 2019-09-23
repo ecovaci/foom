@@ -15,7 +15,7 @@
       spacing="10.0"
       xmlns="http://javafx.com/javafx/8"
       xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="org.kpax.foom.util.view.SelectJavaBeanController">
+      fx:controller="org.kpax.foom.user.view.SelectJavaBeanController">
     <children>
         <Label text="Select JavaBean:">
          <HBox.margin>
