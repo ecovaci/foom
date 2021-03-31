@@ -19,7 +19,7 @@
 		<openjfx.version>11</openjfx.version>
 		<controlsfx.version>11.0.0</controlsfx.version>
 		<commons-collections.version>4.4</commons-collections.version>
-		<guava.version>28.0-jre</guava.version>
+		<guava.version>29.0-jre</guava.version>
 		<commons-lang3.version>3.9</commons-lang3.version>
 	</properties>
 
